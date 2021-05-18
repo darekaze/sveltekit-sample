@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "target": "esnext",
-    "module": "esnext",
+    "target": "es2019",
+    "module": "es2020",
+    "lib": ["es2020"],
     /**
      * svelte-preprocess cannot figure out whether you have
      * a value or a type, so tell TypeScript to enforce using
@@ -27,7 +28,10 @@
      * of JS in `.svelte` files.
      */
     "allowJs": true,
-    "checkJs": true
+    "checkJs": true,
+    "paths": {
+      "$lib/*": ["src/lib/*"]
+    }
   },
   /**
    * Use global.d.ts instead of compilerOptions.types
