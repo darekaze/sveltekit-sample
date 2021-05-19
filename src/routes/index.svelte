@@ -4,6 +4,7 @@
 
 <script lang="ts">
   import Counter from '$lib/Counter/index.svelte'
+  import { Button } from 'carbon-components-svelte'
 </script>
 
 <svelte:head>
@@ -23,8 +24,10 @@
   </h1>
 
   <h2>
-    try editing <strong>src/routes/index.svelte</strong>
+    try editing <strong>src/routes/index</strong>
   </h2>
+
+  <Button kind="ghost">Ghost button</Button>
 
   <Counter />
 </section>
@@ -56,4 +59,5 @@
     top: 0;
     display: block;
   }
+
 </style>

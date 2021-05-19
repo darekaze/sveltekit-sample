@@ -1,6 +1,7 @@
 <script lang="ts">
+  import 'carbon-components-svelte/css/g10.css'
   import Header from '$lib/Header/index.svelte'
-  import '../app.css'
+
 </script>
 
 <Header />
@@ -13,7 +14,7 @@
   <p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 </footer>
 
-<style>
+<style lang="scss">
   main {
     flex: 1;
     display: flex;
@@ -42,4 +43,5 @@
       padding: 40px 0;
     }
   }
+
 </style>

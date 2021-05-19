@@ -1,15 +1,17 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-
 import sveltePreprocess from 'svelte-preprocess'
+import { optimizeImports, optimizeCss } from 'carbon-preprocess-svelte'
+import staticAdapter from '@sveltejs/adapter-static'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  // Consult https://github.com/sveltejs/svelte-preprocess
-  // for more information about preprocessors
-  preprocess: sveltePreprocess(),
+  preprocess: [sveltePreprocess(), optimizeImports()],
   kit: {
-    // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte',
+    adapter: staticAdapter(),
+    vite: {
+      optimizeDeps: { include: ['clipboard-copy'] },
+      plugins: [process.env.NODE_ENV === 'production' && optimizeCss()],
+    },
   },
 }
 

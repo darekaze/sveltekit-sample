@@ -13,17 +13,23 @@
   "dependencies": {
     "@fontsource/fira-mono": "^4.2.2",
     "@lukeed/uuid": "^2.0.0",
+    "clipboard-copy": "^4.0.1",
     "cookie": "^0.4.1"
   },
   "devDependencies": {
+    "@sveltejs/adapter-static": "^1.0.0-next.10",
+    "@sveltejs/adapter-vercel": "^1.0.0-next.18",
     "@sveltejs/kit": "next",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
+    "carbon-components-svelte": "^0.33.0",
+    "carbon-preprocess-svelte": "^0.1.0",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-svelte3": "^3.2.0",
     "prettier": "~2.3.0",
     "prettier-plugin-svelte": "^2.3.0",
+    "sass": "^1.32.13",
     "svelte": "^3.37.0",
     "svelte-preprocess": "^4.7.2",
     "typescript": "^4.2.4"
