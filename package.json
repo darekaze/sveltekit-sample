@@ -12,9 +12,7 @@
   "type": "module",
   "dependencies": {
     "@lukeed/uuid": "^2.0.0",
-    "@sveltestack/svelte-query": "^1.4.1",
-    "clipboard-copy": "^4.0.1",
-    "cookie": "^0.4.1"
+    "@sveltestack/svelte-query": "^1.4.1"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^1.0.0-next.13",
@@ -23,7 +21,7 @@
     "@typescript-eslint/eslint-plugin": "^4.26.1",
     "@typescript-eslint/parser": "^4.26.1",
     "carbon-components-svelte": "^0.33.0",
-    "carbon-preprocess-svelte": "^0.1.0",
+    "carbon-preprocess-svelte": "^0.3.0",
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.0",
@@ -44,7 +42,7 @@
   },
   "lint-staged": {
     "./src/**/*.{svelte,ts}": [
-      "pnpm lint"
+      "yarn lint"
     ]
   }
 }

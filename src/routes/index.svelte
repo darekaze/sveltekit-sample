@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-  import Counter from '$lib/Counter/index.svelte'
+  import Counter from '$lib/components/Counter/index.svelte'
   import { Button } from 'carbon-components-svelte'
 </script>
 

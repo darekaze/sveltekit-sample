@@ -9,7 +9,9 @@ const config = {
     target: '#svelte',
     adapter: staticAdapter(),
     vite: {
-      optimizeDeps: { include: ['clipboard-copy'] },
+      optimizeDeps: {
+        include: ['clipboard-copy', 'broadcast-channel'],
+      },
       plugins: [process.env.NODE_ENV === 'production' && optimizeCss()],
     },
   },
