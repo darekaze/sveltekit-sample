@@ -6,7 +6,6 @@ import staticAdapter from '@sveltejs/adapter-static'
 const config = {
   preprocess: [sveltePreprocess(), optimizeImports()],
   kit: {
-    target: '#svelte',
     adapter: staticAdapter(),
     vite: {
       optimizeDeps: {
