@@ -7,9 +7,7 @@
   import { Button } from 'carbon-components-svelte'
 </script>
 
-<svelte:head>
-  <title>Home</title>
-</svelte:head>
+<!-- This page loads the analyzer in the first place -->
 
 <section>
   <h1>
@@ -33,18 +31,6 @@
 </section>
 
 <style>
-  section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-  }
-
-  h1 {
-    width: 100%;
-  }
-
   .welcome {
     position: relative;
     width: 100%;
@@ -59,5 +45,4 @@
     top: 0;
     display: block;
   }
-
 </style>

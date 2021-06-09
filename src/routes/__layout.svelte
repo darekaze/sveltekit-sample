@@ -1,12 +1,34 @@
 <script lang="ts">
+  import { page } from '$app/stores'
   import { QueryClient, QueryClientProvider } from '@sveltestack/svelte-query'
   import { Content } from 'carbon-components-svelte'
   import Header from '$lib/components/Header/index.svelte'
+  import type { IHeaderNavLink } from '$lib/types'
 
+  const navLinks: IHeaderNavLink[] = [
+    {
+      path: '/about',
+      label: 'About',
+    },
+    {
+      path: '/settings',
+      label: 'Settings',
+    },
+    {
+      path: '/users',
+      label: 'Users',
+    },
+  ]
   const queryClient = new QueryClient()
+
+  $: pageTitle = navLinks.find((el) => el.path === $page.path)?.label
 </script>
 
-<Header />
+<svelte:head>
+  <title>{pageTitle ? `${pageTitle} - Uma Trainer` : 'Uma Trainer - blablabla'}</title>
+</svelte:head>
+
+<Header {navLinks} />
 
 <QueryClientProvider client={queryClient}>
   <Content>
@@ -17,10 +39,4 @@
 
 <style global>
   @import 'carbon-components-svelte/css/g10';
-
-  body {
-    min-height: 100vh;
-    width: 100%;
-    overflow-x: hidden;
-  }
 </style>
