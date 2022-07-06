@@ -1,3 +1,3 @@
-# uma-trainer
+# SvelteKit Sample
 
-Uma Assistant in the web
+Trying SvelteKit Beta
